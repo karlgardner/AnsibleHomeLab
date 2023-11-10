@@ -1,4 +1,4 @@
-Task:
+task:
   name: Update all installed Packages using APT moudle
   apt:
     name: "*"
