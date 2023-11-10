@@ -1,7 +1,10 @@
+---
+- hosts: all
+
+  become: true
 task:
   name: Update all installed Packages using APT moudle
   apt:
-    name: "*"
-    state: latest
-    update_cache: yes
-    only_upgrade: yes
+   -name: APT Packager Updater
+      update_cache: yes
+      only_upgrade: yes
