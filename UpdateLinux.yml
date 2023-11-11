@@ -1,8 +1,10 @@
 ---
-  become: true
-  
-  task:
-  - name: APT Packager Updater
-    apt:
-      upgrade: yes
-      update_cache: yes
+- hosts: '*'
+
+  tasks:
+
+    - name: Upgrade installed packages
+      become: true
+      apt:
+        upgrade: safe
+
