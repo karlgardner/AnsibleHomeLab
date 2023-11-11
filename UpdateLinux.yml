@@ -7,4 +7,5 @@
       become: true
       apt:
         upgrade: safe
+        update_cache: yes
 
