@@ -1,0 +1,12 @@
+---
+- hosts: all
+
+  tasks:
+
+    - name: Collect only facts returned by facter
+      become: true
+      setup:
+          gather_subset:
+          - '!all'
+          - '!any'
+          - facter
